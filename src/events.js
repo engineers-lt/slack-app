@@ -8,9 +8,9 @@ exports.handler = async (event, context, callback) => {
   if (slackEvent && slackEvent.type === 'reaction_added') {
     const web = new WebClient(process.env.SLACK_TOKEN)
     const res = await web.chat.postMessage({
-      channel: 'times_mottox2',
+      channel: 'sandbox',
       text: `reaction_added: ${slackEvent.reaction}
-channel: ${slackEvent.channel}
+channel: ${slackEvent.item.channel}
 `,
     })
   }

@@ -24,13 +24,13 @@ channel: <#${event.item.channel}>`,
   'team_join': async (event, client) => {
     return client.chat.postMessage({
       channel: 'feed',
-      text: `user_added: ${event.user.display_name}`,
+      text: `user_added: <@${event.user.display_name}>`,
     })
   },
   'channel_created': async (event, client) => {
     return client.chat.postMessage({
       channel: 'feed',
-      text: `channel_added: ${event.channel.id}`,
+      text: `channel_added: <#${event.channel.id}>`,
     })
   },
 }

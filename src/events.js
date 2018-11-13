@@ -13,7 +13,26 @@ const eventResponses = {
       text: `reaction_added: ${event.reaction}
 channel: <#${event.item.channel}>`,
     })
-  }
+  },
+  'emoji_changed': async (event, client) => {
+    if (event.subtype !== "add") { return null }
+    return client.chat.postMessage({
+      channel: 'feed',
+      text: `emoji_added: ${event.name}`,
+    })
+  },
+  'team_join': async (event, client) => {
+    return client.chat.postMessage({
+      channel: 'feed',
+      text: `user_added: ${event.user.display_name}`,
+    })
+  },
+  'channel_created': async (event, client) => {
+    return client.chat.postMessage({
+      channel: 'feed',
+      text: `channel_added: ${event.channel.id}`,
+    })
+  },
 }
 
 exports.handler = async (event, context, callback) => {

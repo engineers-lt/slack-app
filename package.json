@@ -6,6 +6,7 @@
   "author": "mottox2 <y.mottox2@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@slack/client": "^4.8.0",
     "netlify-lambda": "^1.0.3"
   },
   "scripts": {

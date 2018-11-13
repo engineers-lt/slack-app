@@ -1,0 +1,15 @@
+{
+  "name": "slack-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/engineers-lt/slack-app.git",
+  "author": "mottox2 <y.mottox2@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "netlify-lambda": "^1.0.3"
+  },
+  "scripts": {
+    "serve": "netlify-lambda serve src",
+    "build": "netlify-lambda build src"
+  }
+}

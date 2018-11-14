@@ -18,7 +18,7 @@ channel: <#${event.item.channel}>`,
     if (event.subtype !== "add") { return null }
     return client.chat.postMessage({
       channel: 'feed',
-      text: `emoji_added: ${event.name}`,
+      text: `emoji_added: :${event.name}:`,
     })
   },
   'team_join': async (event, client) => {

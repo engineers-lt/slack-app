@@ -27,7 +27,7 @@ const eventResponses = {
   'team_join': async (event, client) => {
     return client.chat.postMessage({
       channel: 'feed',
-      text: `user_added: <@${event.user.display_name}>`,
+      text: `user_added: <@${event.user.id}>`,
     })
   },
   'channel_created': async (event, client) => {

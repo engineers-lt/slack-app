@@ -2,16 +2,19 @@ import { WebClient } from '@slack/client'
 
 const eventResponses = {
   'reaction_added': async (event, client) => {
-    const channel = await client.channels.info({
-      channel: event.item.channel
-    }).then(res => res.channel)
+    if (event.reaction !== 'esa') { return null }
 
-    if (channel.is_private) { return null }
+    const res = await client.conversations.history({
+      latest: event.item.ts,
+      limit: 1,
+      channel: event.item.channel,
+      inclusive: true
+    })
+    const message = res.messages[0]
 
     return client.chat.postMessage({
       channel: 'sandbox',
-      text: `reaction_added: ${event.reaction}
-channel: <#${event.item.channel}>`,
+      text: `esa_emoji_added: ${message}`,
     })
   },
   'emoji_changed': async (event, client) => {

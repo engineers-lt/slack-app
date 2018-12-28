@@ -14,7 +14,7 @@ const eventResponses = {
 
     return client.chat.postMessage({
       channel: 'sandbox',
-      text: `esa_emoji_added: ${message}`,
+      text: `esa_emoji_added: ${message.text}`,
     })
   },
   'emoji_changed': async (event, client) => {

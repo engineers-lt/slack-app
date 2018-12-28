@@ -1466,6 +1466,12 @@ es-to-primitive@^1.1.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+esa-node@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/esa-node/-/esa-node-0.2.0.tgz#bebefdc6fa81aaf8e9992fdea5c9ae2a394972f9"
+  dependencies:
+    axios "^0.18.0"
+
 escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"

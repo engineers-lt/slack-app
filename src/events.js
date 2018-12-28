@@ -1,4 +1,5 @@
 import { WebClient } from '@slack/client'
+import Esa from 'esa-node'
 
 const eventResponses = {
   'reaction_added': async (event, client) => {
@@ -12,9 +13,10 @@ const eventResponses = {
     })
     const message = res.messages[0]
 
-    return client.chat.postMessage({
-      channel: 'sandbox',
-      text: `esa_emoji_added: ${message.text}`,
+    const esa = new Esa(process.env.ESA_TOKEN, 'engineers')
+    return await esa.createPost({
+      name: `Log/Slack/${res.ts}`,
+      body_md: message.text
     })
   },
   'emoji_changed': async (event, client) => {

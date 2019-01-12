@@ -28,8 +28,14 @@ const eventResponses = {
   },
   'team_join': async (event, client) => {
     return client.chat.postMessage({
-      channel: 'feed',
-      text: `user_added: <@${event.user.id}>`,
+      channel: '自己紹介',
+      text: `:new: user_added
+
+<@${event.user.id}> さん、 エンジニアの登壇を応援する会の Slack へようこそ :smile:
+<#${event.channel.id}> で自己紹介をお願いします。
+また、以下の参加ガイドをご確認ください :pray:
+
+https:\/\/esa-pages.io\/p\/sharing\/10407\/posts\/320\/0bb2faf43a53b3226482.html`,
     })
   },
   'channel_created': async (event, client) => {

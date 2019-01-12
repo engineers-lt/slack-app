@@ -32,7 +32,7 @@ const eventResponses = {
       text: `:new: user_added
 
 <@${event.user.id}> さん、 エンジニアの登壇を応援する会の Slack へようこそ :smile:
-<#${event.channel.id}> で自己紹介をお願いします。
+自己紹介をお願いします。
 また、以下の参加ガイドをご確認ください :pray:
 
 https:\/\/esa-pages.io\/p\/sharing\/10407\/posts\/320\/0bb2faf43a53b3226482.html`,

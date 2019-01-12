@@ -1,9 +1,14 @@
-# slack-app
+# slack-app (KOTORI)
 ワークスペースにチャンネル追加、絵文字の追加、新メンバーの参加などのイベントがあったときの通知をしてくれるSlack App。
 Netlifyでの動作を前提としています。
 
+## 変更方法
+src/events.jsの内容を変更し、masterブランチに変更が乗ったタイミングで変更が反映されます。  
+基本的にはPull Requestから変更が行われることを想定しています。
 
-## 設定
+## 初期設定
+engineers-ltではすでに設定が済んでいるため、操作は不要です。
+
 ### Netlifyにデプロイ
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/engineers-lt/slack-app)
 

@@ -22,7 +22,7 @@ const eventResponses = {
   'emoji_changed': async (event, client) => {
     if (event.subtype !== "add") { return null }
     return client.chat.postMessage({
-      channel: 'feed',
+      channel: 'sandbox',
       text: `emoji_added: :${event.name}:`,
     })
   },

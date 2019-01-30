@@ -41,7 +41,11 @@ https:\/\/esa-pages.io\/p\/sharing\/10407\/posts\/320\/0bb2faf43a53b3226482.html
   'channel_created': async (event, client) => {
     return client.chat.postMessage({
       channel: 'feed',
-      text: `channel_added: <#${event.channel.id}>`,
+      text: `channel_added: <#${event.channel.id}>
+<@${event.user.id}> さん、 作成した channel の purpose の設定をお願いします :smile:
+設定方法が不明の場合は、以下の help をご確認ください :pray:
+
+https://get.slack.help/hc/ja/articles/201654083-Set-a-channel-topic-or-purpose`,
     })
   },
 }
